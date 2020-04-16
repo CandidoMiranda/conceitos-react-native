@@ -50,11 +50,11 @@ export default function App() {
           <Text style={styles.repository}>{repository.title}</Text>
          
           <View style={styles.techsContainer}>
-            {/* {repository.techs.split(',').map(tech => (
+            {repository.techs.split(',').map(tech => (
               <Text key={`${tech}-${repository.id}`} style={styles.tech}>
                 {tech}
               </Text> 
-            ))}  */}
+            ))} 
           </View>
 
           <View style={styles.likesContainer}>
@@ -62,8 +62,7 @@ export default function App() {
               style={styles.likeText}
               testID={`repository-likes-${repository.id}`}
             >
-              {repository.likes}
-              {repository.likes > 1 ? ' curtidas' : ' curtida'}
+              {repository.likes} curtida{repository.likes > 1 ? 's' : ''}
             </Text>
           </View>
 
